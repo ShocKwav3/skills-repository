@@ -1,0 +1,4 @@
+.venv
+externalResources/
+.claude/settings.local.json
+.claude/skills/skill-creator/scripts/__pycache__/
