@@ -67,6 +67,88 @@ Provides proactive guidance when designing classes, implementing features, refac
 
 ![AFTER-PROMPT-CODE-STANDARD](images/coding-standard-after-context-load-prompt.png)
 
+### act-wrapper
+**Purpose:** Run GitHub Actions workflows locally using nektos/act with filtered output
+
+**Usage:** Copy to your actual projects. Use either:
+- The skill folder from `.claude/skills/act-wrapper/`
+- The packaged file `skillPackages/act-wrapper.skill`
+
+Filters ACT's infrastructure noise (docker operations, action cloning, internal commands) while preserving all actual workflow output. Language and ecosystem agnostic. With colors!
+
+Instead of verbose ACT output with docker operations and internal commands
+
+![ACT-VERBOSE-OUTPUT](images/act-wrapper-verbose-output-from-act.png)
+
+The agent receives clean, filtered output showing only relevant workflow information.
+
+![ACT-FILTERED-OUTPUT](images/act-wrapper-filtered-output-from-script.png)
+
+At the end, conclusion is printed.
+
+![ACT-CONCLUSION-OUTPUT](images/act-wrapper-conclusion.png)
+
+**Token usage:** Approximately 2k tokens with Claude Code.
+
+**Before skill is loaded**
+
+![BEFORE-CONTEXT-ACT-WRAPPER](images/act-wrapper-before-context-load.png)
+
+**After skill is loaded**
+
+![AFTER-CONTEXT-ACT-WRAPPER](images/act-wrapper-after-context-load.png)
+
+### architecture-patterns
+**Purpose:** Implement proven backend architecture patterns including Clean Architecture, Hexagonal Architecture, and Domain-Driven Design
+
+**Usage:** Copy to your actual projects. Use either:
+- The skill folder from `.claude/skills/architecture-patterns/`
+- The packaged file `skillPackages/architecture-patterns.skill`
+
+Provides guidance when designing new backend systems, refactoring monolithic applications, establishing architecture standards, migrating to loosely coupled architectures, implementing DDD principles, or planning microservices decomposition.
+
+**Token usage:** Approximately 3k tokens with Claude Code.
+
+**Before skill is loaded**
+
+![BEFORE-CONTEXT-ARCHITECTURE-PATTERNS](images/architecture-patterns-before-context-load.png)
+
+**After skill is loaded**
+
+![AFTER-CONTEXT-ARCHITECTURE-PATTERNS](images/architecture-patterns-after-context-load.png)
+
+### systematic-debugging
+**Purpose:** Systematic debugging methodology for finding root causes before proposing fixes
+
+**Usage:** Copy to your actual projects. Use either:
+- The skill folder from `.claude/skills/systematic-debugging/`
+- The packaged file `skillPackages/systematic-debugging.skill`
+
+Enforces a four-phase debugging process: Root Cause Investigation, Pattern Analysis, Hypothesis and Testing, and Implementation. Use when encountering any bug, test failure, or unexpected behavior.
+
+**Core principle:** ALWAYS find root cause before attempting fixes. Symptom fixes are failure.
+
+[Reference](https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md)
+
+### typescript-standards
+**Purpose:** TypeScript coding standards, patterns, and best practices for writing type-safe, maintainable code
+
+**Usage:** Copy to your actual projects. Use either:
+- The skill folder from `.claude/skills/typescript-standards/`
+- The packaged file `skillPackages/typescript-standards.skill`
+
+Provides guidance when writing TypeScript code, refactoring JavaScript to TypeScript, implementing type-safe patterns, working with advanced types, or building type-safe APIs. This skill uses progressive disclosure with detailed reference files for conventions, patterns, advanced types, and modern TypeScript patterns.
+
+**Token usage:** Approximately N tokens with Claude Code (.claude/skills/typescript-standards/SKILL.md). This skill uses progressive disclosure with reference files loaded as needed.
+
+**Before skill is loaded**
+
+![BEFORE-CONTEXT-TYPESCRIPT-STANDARDS](images/typescript-standards-before-context-load.png)
+
+**After skill is loaded**
+
+![AFTER-CONTEXT-TYPESCRIPT-STANDARDS](images/typescript-standards-after-context-load.png)
+
 ## Getting Started
 
 1. **To use a skill in your project:**
